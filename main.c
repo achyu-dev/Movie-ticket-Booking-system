@@ -44,9 +44,11 @@ int main()
 		}
 	}
 }
+
+
 int changeprize(int prize)
 {
-	char pass[10],pak[10]="pass";
+    char pass[10],pak[10]="pass";
 	printf("Enter the password to change price of ticket: ");
 	scanf("%s",&pass);
 	if (strcmp(pass,pak)==0)
@@ -60,6 +62,8 @@ int changeprize(int prize)
 		printf("The entered password is wrong! ");
 	return prize;
 }
+
+
 void reservation(int *array,int price,int slection)
 {
 		int i,j;
@@ -184,6 +188,7 @@ int movie(void)
 	system("cls");
 	return i;
 }
+
 void ticket2(int choice,char name[10],int id2,int price)
 {
 		system("cls");
@@ -201,6 +206,7 @@ void ticket2(int choice,char name[10],int id2,int price)
         printf("\t============================================================\n");
         return;
 }
+
 int cmovie(void)
 {
 	int i;
