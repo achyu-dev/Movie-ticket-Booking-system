@@ -9,6 +9,7 @@ struct moviedetails person[300];
 int count=0;
 int id2=1000;
 int main()
+
 {
 	int **seat,choice,price=500,slection,i;
 	seat=(int **)calloc(101,sizeof(int *));
@@ -101,14 +102,29 @@ void reservation(int *array,int price,int slection)
 			ticket1(j,person[count].name,id2,price);
 		else if (slection==2)
 			ticket2(j,person[count].name,id2,price);
-		else
+		else if (slection==3)
 			ticket3(j,person[count].name,id2,price);
+        else if (slection==4)
+            ticket4(j,person[count].name,id2,price);
+        else if (slection==5)
+            ticket5(j,person[count].name,id2,price);
+        else if (slection==6)
+            ticket6(j,person[count].name,id2,price);
+        else if (slection==7)
+            ticket7(j,person[count].name,id2,price);
+        else if (slection==8)
+            ticket8(j,person[count].name,id2,price);
+        else if (slection==9)
+            ticket9(j,person[count].name,id2,price);
+        else
+            ticket10(j,person[count].name,id2,price);
 		id2++;
 }
+
 int choice1(void)
 {
 	int choice;
-	printf("                 Simple Movie Ticket Booking System\n");
+	printf("                  Movie Ticket Booking System\n");
 	printf(" ==================================================================\n");
 	printf("||             1- To edit price of ticket (only admin):           ||\n");
 	printf("||             2- To view reserved tickets (only admin):          ||\n");
@@ -120,6 +136,7 @@ int choice1(void)
 	scanf("%d",&choice);
 	return choice;
 }
+
 void cancel(int *array)
 {
       int Cseat,i,stop;
@@ -139,7 +156,9 @@ void cancel(int *array)
 	  if (stop!=5)
 	  		printf("Ticket ID number is incorrect please enter right one to cancel ticket: \n");
 }
-void ticket1(int choice,char name[10],int id2,int price)
+
+
+void ticket1(int choice,char name[100],int id2,int price)
 {
 		system("cls");
 		printf("\n\n");
@@ -147,15 +166,16 @@ void ticket1(int choice,char name[10],int id2,int price)
         printf("\t============================================================\n");
         printf("\t Booking ID : %d \t\t\tShow Name : Avengers: EndGame\n",id2);
         printf("\t Customer  : %s\n",name);
-        printf("\t\t\t                              Date      : 29-04-2019\n");
+        printf("\t\t\t                              Date      : 22-04-2022\n");
         printf("\t                                              Time      : 08:00pm\n");
-        printf("\t                                              Hall      : 02\n");
+        printf("\t                                              Hall      : 01\n");
         printf("\t                                              seats No. : %d  \n",choice);
         printf("\t                                              price . : %d  \n\n",price);
 		person[count].id=id2;
         printf("\t============================================================\n");
         return;
 }
+
 void details(void)
 {
 	int i;
@@ -175,6 +195,8 @@ void details(void)
 		system("CLS");
 
 }
+
+
 int movie(void)
 {
 	int i;
@@ -184,12 +206,19 @@ int movie(void)
 	printf("\t\t\tpress 1 for Avengers: EndGame\n\n");
 	printf("\t\t\tpress 2 for Captain Marvel\n\n");
 	printf("\t\t\tpress 3 for Spider-Man: Far From Home\n");
+	printf("\t\t\tpress 4 for KGF Chapter-2(Kannada)\n");
+	printf("\t\t\tpress 5 for RRR\n");
+	printf("\t\t\tpress 6 for Doctor Strange: In the Multiverse of Madness\n");
+	printf("\t\t\tpress 7 for Bhoolbullaiya-2(Hindi)\n");
+	printf("\t\t\tpress 8 for Pushpa(Telugu)\n");
+	printf("\t\t\tpress 9 for Beast(Tamil)\n");
+	printf("\t\t\tpress 10 for James(Kannada)\n");
 	scanf("%d",&i);
 	system("cls");
 	return i;
 }
 
-void ticket2(int choice,char name[10],int id2,int price)
+void ticket2(int choice,char name[100],int id2,int price)
 {
 		system("cls");
 		printf("\n\n");
@@ -197,8 +226,8 @@ void ticket2(int choice,char name[10],int id2,int price)
         printf("\t============================================================\n");
         printf("\t Booking ID : %d \t\t\tShow Name : Captain Marvel\n",id2);
         printf("\t Customer  : %s\n",name);
-        printf("\t\t\t                              Date      : 15-04-2019\n");
-        printf("\t                                              Time      : 09:00pm\n");
+        printf("\t\t\t                              Date      : 22-04-2022\n");
+        printf("\t                                              Time      : 09:00am\n");
         printf("\t                                              Hall      : 03\n");
         printf("\t                                              seats No. : %d  \n",choice);
         printf("\t                                              price . : %d  \n\n",price);
@@ -215,11 +244,18 @@ int cmovie(void)
 	printf("\t\t\tpress 1 for Avengers: EndGame\n\n");
 	printf("\t\t\tpress 2 for Captain Marvel\n\n");
 	printf("\t\t\tpress 3 for Spider-Man: Far From Home\n");
+	printf("\t\t\tpress 4 for KGF Chapter-2(Kannada)\n");
+	printf("\t\t\tpress 5 for RRR\n");
+	printf("\t\t\tpress 6 for Doctor Strange: In the Multiverse of Madness\n");
+	printf("\t\t\tpress 7 for Bhoolbullaiya-2(Hindi)\n");
+	printf("\t\t\tpress 8 for Pushpa(Telugu)\n");
+	printf("\t\t\tpress 9 for Beast(Tamil)\n");
+	printf("\t\t\tpress 10 for James(Kannada)\n");
 	scanf("%d",&i);
 	return i;
 }
 
-void ticket3(int choice,char name[10],int id2,int price)
+void ticket3(int choice,char name[100],int id2,int price)
 {
 		system("cls");
 		printf("\n\n");
@@ -227,7 +263,7 @@ void ticket3(int choice,char name[10],int id2,int price)
         printf("\t============================================================\n");
         printf("\t Booking ID : %d \t\t\tShow Name : Spider-Man: Far From Home \n",id2);
         printf("\t Customer  : %s\n",name);
-        printf("\t\t\t                              Date      : 5-07-2019\n");
+        printf("\t\t\t                              Date      : 23-04-2022\n");
         printf("\t                                              Time      : 10:00pm\n");
         printf("\t                                              Hall      : 04\n");
         printf("\t                                              seats No. : %d  \n",choice);
@@ -236,3 +272,136 @@ void ticket3(int choice,char name[10],int id2,int price)
         printf("\t============================================================\n");
         return;
 }
+
+void ticket4(int choice,char name[100],int id2,int price)
+{
+		system("cls");
+		printf("\n\n");
+        printf("\t-----------------THEATER BOOKING TICKET----------------\n");
+        printf("\t============================================================\n");
+        printf("\t Booking ID : %d \t\t\tShow Name : KGF Chapter 2(Kannada)\n",id2);
+        printf("\t Customer  : %s\n",name);
+        printf("\t\t\t                              Date      : 25-04-2022\n");
+        printf("\t                                              Time      : 9:00am\n");
+        printf("\t                                              Hall      : 05\n");
+        printf("\t                                              seats No. : %d  \n",choice);
+        printf("\t                                              price . : %d  \n\n",price);
+        person[count].id=id2;
+        printf("\t============================================================\n");
+        return;
+}
+
+
+void ticket5(int choice,char name[100],int id2,int price)
+{
+		system("cls");
+		printf("\n\n");
+        printf("\t-----------------THEATER BOOKING TICKET----------------\n");
+        printf("\t============================================================\n");
+        printf("\t Booking ID : %d \t\t\tShow Name : RRR(Telugu)\n",id2);
+        printf("\t Customer  : %s\n",name);
+        printf("\t\t\t                              Date      : 25-04-2022\n");
+        printf("\t                                              Time      : 12:15pm\n");
+        printf("\t                                              Hall      : 05\n");
+        printf("\t                                              seats No. : %d  \n",choice);
+        printf("\t                                              price . : %d  \n\n",price);
+        person[count].id=id2;
+        printf("\t============================================================\n");
+        return;
+}
+
+
+void ticket6(int choice,char name[100],int id2,int price)
+{
+		system("cls");
+		printf("\n\n");
+        printf("\t-----------------THEATER BOOKING TICKET----------------\n");
+        printf("\t============================================================\n");
+        printf("\t Booking ID : %d \t\t\tShow Name : Doctor Strange: In the Multiverse of Madness\n",id2);
+        printf("\t Customer  : %s\n",name);
+        printf("\t\t\t                              Date      : 25-04-2022\n");
+        printf("\t                                              Time      : 6:45pm\n");
+        printf("\t                                              Hall      : 05\n");
+        printf("\t                                              seats No. : %d  \n",choice);
+        printf("\t                                              price . : %d  \n\n",price);
+        person[count].id=id2;
+        printf("\t============================================================\n");
+        return;
+}
+
+
+
+void ticket7(int choice,char name[100],int id2,int price)
+{
+		system("cls");
+		printf("\n\n");
+        printf("\t-----------------THEATER BOOKING TICKET----------------\n");
+        printf("\t============================================================\n");
+        printf("\t Booking ID : %d \t\t\tShow Name : Bhoolbulaiya-2(Hindi)\n",id2);
+        printf("\t Customer  : %s\n",name);
+        printf("\t\t\t                              Date      : 25-04-2022\n");
+        printf("\t                                              Time      : 10:00pm\n");
+        printf("\t                                              Hall      : 06\n");
+        printf("\t                                              seats No. : %d  \n",choice);
+        printf("\t                                              price . : %d  \n\n",price);
+        person[count].id=id2;
+        printf("\t============================================================\n");
+        return;
+}
+
+void ticket8(int choice,char name[10],int id2,int price)
+{
+		system("cls");
+		printf("\n\n");
+        printf("\t-----------------THEATER BOOKING TICKET----------------\n");
+        printf("\t============================================================\n");
+        printf("\t Booking ID : %d \t\t\tShow Name : Pushpa-01:The Rise(Telugu)\n",id2);
+        printf("\t Customer  : %s\n",name);
+        printf("\t\t\t                              Date      : 26-04-2022\n");
+        printf("\t                                              Time      : 09:00am\n");
+        printf("\t                                              Hall      : 05\n");
+        printf("\t                                              seats No. : %d  \n",choice);
+        printf("\t                                              price . : %d  \n\n",price);
+        person[count].id=id2;
+        printf("\t============================================================\n");
+        return;
+}
+
+void ticket9(int choice,char name[100],int id2,int price)
+{
+		system("cls");
+		printf("\n\n");
+        printf("\t-----------------THEATER BOOKING TICKET----------------\n");
+        printf("\t============================================================\n");
+        printf("\t Booking ID : %d \t\t\tShow Name : Beast(Tamil)\n",id2);
+        printf("\t Customer  : %s\n",name);
+        printf("\t\t\t                              Date      : 26-04-2022\n");
+        printf("\t                                              Time      : 12:15pm\n");
+        printf("\t                                              Hall      : 05\n");
+        printf("\t                                              seats No. : %d  \n",choice);
+        printf("\t                                              price . : %d  \n\n",price);
+        person[count].id=id2;
+        printf("\t============================================================\n");
+        return;
+}
+
+void ticket10(int choice,char name[100],int id2,int price)
+{
+		system("cls");
+		printf("\n\n");
+        printf("\t-----------------THEATER BOOKING TICKET----------------\n");
+        printf("\t============================================================\n");
+        printf("\t Booking ID : %d \t\t\tShow Name : James(Kannada)\n",id2);
+        printf("\t Customer  : %s\n",name);
+        printf("\t\t\t                              Date      : 26-04-2022\n");
+        printf("\t                                              Time      : 3:30pm\n");
+        printf("\t                                              Hall      : 05\n");
+        printf("\t                                              seats No. : %d  \n",choice);
+        printf("\t                                              price . : %d  \n\n",price);
+        person[count].id=id2;
+        printf("\t============================================================\n");
+        return;
+}
+
+
+
