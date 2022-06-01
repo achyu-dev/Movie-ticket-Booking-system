@@ -8,16 +8,13 @@
 //#include <dos.h>
 
 
-
-
-
 struct moviedetails person[300];
 int count=0;
-int id2=1000;
+int id2=1065;
 int main()
 
 {
-	int **seat,choice,price=500,slection,i;
+	int **seat,choice,price=10,slection,i;
 	seat=(int **)calloc(101,sizeof(int *));
 	for (i=0;i<11;i++)
 		*(seat+i)=(int *)calloc(101,sizeof(int));
@@ -55,7 +52,7 @@ int main()
 
 int changeprize(int prize)
 {
-    char pass[10],pak[10]="pass";
+    char pass[10],pak[70]="welovepriyakamaam";
 	printf("Enter the password to change price of ticket: ");
 	scanf("%s",&pass);
 	if (strcmp(pass,pak)==0)
@@ -73,15 +70,15 @@ int changeprize(int prize)
 void White() {
   printf("\033[0;37m");
 }
-void Blue() {
-  printf("\033[0;34m");
+void Red() {
+  printf("\033[0;31m");
 }
 
 void reservation(int *array,int price,int slection)
 {
 		int i,j;
-		Blue();
-		printf("\n              A  L  L     E  Y  E  S     H  E  R  E     P  L  E  A  S  E\n\n\n");
+		Red();
+		printf("\n              A  L  L     E  Y  E  S     H  E  R  E     P  L  E  A  S  E              \n\n\n");
         White();
 		for (i=1;i<=100;i++)
 		{
@@ -140,17 +137,18 @@ void reservation(int *array,int price,int slection)
 int choice1(void)
 {
 	int choice;
-	printf("---------------CINEPLEX ENTERTAINMENTS------------------------\n\n");
-	printf("----------------------------------------------------------------\n");
-	printf("||      1 -To edit price of ticket (Admins only):             ||\n");
-	printf("||      2 - View reserved tickets (Admins only)               ||\n");
-	printf("||      3 - Buy tickets:                                      ||\n");
-	printf("||      4 - Cancellation of Tickets (For users):              ||\n");
-	printf("||      5 - Exit:                                             ||\n");
-	printf("----------------------------------------------------------------\n");
+	printf("---------------CINEPLEX ENTERTAINMENTS----------------\n\n");
+	printf("--------------------------------------------------------\n");
+	printf("||      1 -To edit price of ticket (Admins only):     ||\n");
+	printf("||      2 - View reserved tickets (Admins only):      ||\n");
+	printf("||      3 - Buy tickets:                              ||\n");
+	printf("||      4 - Cancellation of Tickets (For users):      ||\n");
+	printf("||      5 - Exit:                                     ||\n");
+	printf("--------------------------------------------------------\n");
 	scanf("%d",&choice);
 	return choice;
 }
+
 
 void cancel(int *array)
 {
@@ -195,7 +193,7 @@ void ticket1(int choice,char name[100],int id2,int price)
 void details(void)
 {
 	int i;
-	char pass[10],pak[10]="pass";
+	char pass[10],pak[70]="welovepriyakamaam";
 	printf("Enter the password to see details: ");
 	scanf("%s",&pass);
 	if (strcmp(pass,pak)==0)
@@ -420,6 +418,9 @@ void ticket10(int choice,char name[100],int id2,int price)
         printf("\t============================================================\n");
         return;
 }
+
+
+
 
 
 
