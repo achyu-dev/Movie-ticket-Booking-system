@@ -4,8 +4,7 @@
 #include"decleration.c"
 #include<strings.h>
 #include<windows.h>
-//#include <graphics.h>
-//#include <dos.h>
+
 
 
 struct moviedetails person[300];
@@ -14,7 +13,7 @@ int id2=1065;
 int main()
 
 {
-	int **seat,choice,price=10,slection,i;
+	int **seat,choice,price=500,slection,i;
 	seat=(int **)calloc(101,sizeof(int *));
 	for (i=0;i<11;i++)
 		*(seat+i)=(int *)calloc(101,sizeof(int));
@@ -52,7 +51,7 @@ int main()
 
 int changeprize(int prize)
 {
-    char pass[10],pak[70]="welovepriyakamaam";
+    char pass[10],pak[70]="welovepriyankamaam";
 	printf("Enter the password to change price of ticket: ");
 	scanf("%s",&pass);
 	if (strcmp(pass,pak)==0)
@@ -193,7 +192,7 @@ void ticket1(int choice,char name[100],int id2,int price)
 void details(void)
 {
 	int i;
-	char pass[10],pak[70]="welovepriyakamaam";
+	char pass[10],pak[70]="welovepriyankamaam";
 	printf("Enter the password to see details: ");
 	scanf("%s",&pass);
 	if (strcmp(pass,pak)==0)
@@ -254,7 +253,7 @@ void ticket2(int choice,char name[100],int id2,int price)
 
 int cmovie(void)
 {
-	int i;
+	int i, number;
 	printf("\t\t\twhich movie ticket you want to cancel\n");
 	printf("\t\t\t-------------------------------------\n");
 	printf("\t\t\tpress 1 for Avengers: EndGame\n\n");
@@ -268,8 +267,16 @@ int cmovie(void)
 	printf("\t\t\tpress 9 for Mission Impossible\n\n");
 	printf("\t\t\tpress 10 for The Adam Project\n\n");
 	scanf("%d",&i);
+
+	printf("Please enter your Phone number: \n");
+	scanf("%d", &number);
+
+	printf("Your A/C XXXXXXX4342 has been credited with 500\n");
+
+
 	return i;
 }
+
 
 void ticket3(int choice,char name[100],int id2,int price)
 {
